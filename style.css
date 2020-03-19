@@ -1,0 +1,25 @@
+.header-text {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: darkblue;
+    color: white;
+}
+.main-container {
+    padding-top:100px;
+}
+.search-col {
+    border: 1px solid black;
+}
+.main-col {
+    border: 1px solid black;
+    width: 100%;
+    height: 200px;
+}
+.card-style {
+    height: 300px;
+    width: 100% !important;
+}
+.card-container {
+    padding-top: 20px;
+}
