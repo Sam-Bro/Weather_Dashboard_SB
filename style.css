@@ -31,3 +31,17 @@ body {
 .card-container {
     padding-top: 20px;
 }
+.search-row {
+    padding-top: 5%;
+    padding-left: 3%;
+}
+.btn-search {
+    border: 1px solid lightblue;
+    background-color: lightblue;
+    color: black;
+}
+.btn-search:hover {
+    background-color: blue;
+    color: white;
+    border-color: blue;
+}
