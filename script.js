@@ -11,14 +11,21 @@ function searchWeather(searchValue) {
     var searchValue = document.getElementById("city-search").value;
     $.ajax ({
         type: "GET",
-        url: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=5c646586befaee69363c2a97ded52005",
+        url: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&units=metric&appid=5c646586befaee69363c2a97ded52005",
         dataType: "json",
         success: function(data) {
-        var temp = data.list[0].main.temp - 273.15;
+        var temp = data.list[0].main.temp;
         var name = data.city.name;
+        var date = data.list[0].dt_txt;
+        var windspeed =  data.list[0].wind.speed;
+        var humidity = data.list[0].main.humidity;
+
 
         $("#weather-name").append(name);
         $("#weather-temp").append("temperature: " + temp + " °C");
+        $("#weather-date").append(date);
+        $("#weather-windspeed").append("Windspeed: " + windspeed);
+        $("#weather-humidity").append("Humidity: " + humidity);
         }
     })
 }
