@@ -1,6 +1,7 @@
 body {
     background-image: url("https://wallpaperaccess.com/full/104824.jpg");
 }
+/* header bar style */
 .header-text {
     text-align: center;
     padding-top: 10px;
@@ -13,23 +14,10 @@ body {
     width: 95%;
     margin: auto;
 }
+/* aside search column styles */
 .search-col {
     border: 1px solid black;
     background-color: lightgrey;
-}
-.main-col {
-    border: 1px solid black;
-    background-color: white;
-    width: 100%;
-    height: 200px;
-}
-.card-style {
-    height: 300px;
-    width: 100% !important;
-    background-color: lightblue;
-}
-.card-container {
-    padding-top: 20px;
 }
 .search-row {
     padding-top: 5%;
@@ -45,51 +33,82 @@ body {
     color: white;
     border-color: blue;
 }
+/* main weather section styles  */
+.main-col {
+    border: 1px solid black;
+    background-color: white;
+    width: 100%;
+    height: 200px;
+}
 .weather-text {
     padding-left: 10px;
+    text-align: center;
 }
 #weather-name {
     padding-top: 10px;
 }
-
-
-
-
-
-
- /* 5 column row */
-.col-xs-5ths,
-.col-sm-5ths,
-.col-md-5ths,
-.col-lg-5ths {
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
+#weather-name-card0 {
+    font-size: 2em;
+}
+.row-style {
+    margin: 0;
+    font-size: 1em;
+    height: 50%;
+    padding-top: 20%;
+}
+.column-style {
+    height: 100%;
 }
 
-.col-xs-5ths {
-    width: 20%;
-    float: left;
+#weather-temp-card0  {
+    font-size: 2.3em;
+    line-height: 200px;
+    height: 200px;
+    font-weight: bold;
 }
-
-@media (min-width: 768px) {
-    .col-sm-5ths {
-        width: 20%;
-        float: left;
-    }
+.row-today {
+    height: 100%;
 }
-
-@media (min-width: 992px) {
-    .col-md-5ths {
-        width: 20%;
-        float: left;
-    }
+.row-max {
+    background-color: lightcoral;
 }
-
-@media (min-width: 1200px) {
-    .col-lg-5ths {
-        width: 20%;
-        float: left;
-    }
+.row-min {
+    background-color: turquoise;
+}
+#main-weather-get {
+    height: 100%;
+}
+/* card styles */
+.card-container {
+    padding-top: 20px;
+}
+.card-style {
+    height: 300px;
+    width: 100% !important;
+    background-color: darkturquoise;
+}
+.card-date {
+    text-align: center;
+    margin: 0;
+}
+.card-temp {
+    font-size: 2em;
+    text-align: center;
+    color: yellow;
+    margin: 0;
+    
+}
+.card-windspeed,
+.card-humidity {
+    font-size: 1.4em;
+    margin: 0;
+}
+.card-humidity {
+    font-weight: 500;
+}
+.card-break {
+    margin-bottom: 5px;
+}
+.hide {
+    display: none;
 }

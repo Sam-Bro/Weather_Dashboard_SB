@@ -26,12 +26,44 @@
             </aside>
             <section class="col-md-9 ">
                 <article class="main-col" id="main-col">
-                    <section id="main-weather-get">
-                        <h3 class="weather-text" id="weather-name-card0"></h3>
-                        <p class="weather-text" id="weather-date-card0"></p>
-                        <p class="weather-text" id="weather-temp-card0"></p>
-                        <p class="weather-text" id="weather-windspeed-card0"></p>
-                        <p class="weather-text" id="weather-humidity-card0"></p>
+                    <section class="container" id="main-weather-get">
+                        <article class="row row-today">
+                            <div class="col-md-3 column-style">
+                                <div class="row row-style">
+                                    <h3 class="weather-text" id="weather-name-card0"></h3>
+                                </div>
+                                <div class="row row-style ">
+                                    <p class="weather-text" id="weather-date-card0"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 column-style">
+                                <p class="weather-text" id="weather-temp-card0"></p>
+                            </div>
+                            <div class="col-md-3 column-style">
+                                <div class="row row-style row-max">
+                                    <p class="weather-text">Max of</p>
+                                    <p class="weather-text" id="weather-max"></p>
+                                </div>
+                                <div class="row row-style row-min">
+                                    <p class="weather-text">Min of</p>
+                                    <p class="weather-text" id="weather-min"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 column-style">
+                                <div class="row row-style">
+                                    <p class="weather-text">Windspeed</p>
+                                    <p class="weather-text" id="weather-windspeed-card0"></p>
+                                </div>
+                                <div class="row row-style">
+                                    <p class="weather-text">Humidity</p>
+                                    <p class="weather-text" id="weather-humidity-card0"></p>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        
+                        
                         <i class="fas fa-clock"></i>
                     </section>
                 </article>
@@ -40,39 +72,51 @@
                         <div class="col-md-3">
                             <article class="card card-style" style="width: 18rem;">
                                 <div class="card-body">
-                                    <p class="card-text" id="weather-date-card8"></p>
-                                    <h5 class="card-title" id="weather-temp-card8"></h5>
-                                    <h6 class="card-subtitle mb-2 text-muted" id="weather-windspeed-card8"></h6>
-                                    <p class="card-text" id="weather-humidity-card8"> </p>
+                                    <p class="card-date" id="weather-date-card8"></p>
+                                    <p class="card-break">Temperature:</p>
+                                    <h5 class="card-temp" id="weather-temp-card8"></h5>
+                                    <p class="card-break">Windspeed: </p>
+                                    <h6 class="card-windspeed" id="weather-windspeed-card8"></h6>
+                                    <p class="card-break">Humidity: </p>
+                                    <p class="card-humidity" id="weather-humidity-card8"> </p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-3">
                             <article class="card card-style" style="width: 18rem;">
                                 <div class="card-body">
-                                    <p class="card-text" id="weather-date-card16"></p>
-                                    <h5 class="card-title" id="weather-temp-card16"></h5>
-                                    <h6 class="card-subtitle mb-2 text-muted" id="weather-windspeed-card16"></h6>
-                                    <p class="card-text" id="weather-humidity-card16"> </p>
+                                    <p class="card-date" id="weather-date-card16"></p>
+                                    <p class="card-break">Temperature:</p>
+                                    <h5 class="card-temp" id="weather-temp-card16"></h5>
+                                    <p class="card-break">Windspeed: </p>
+                                    <h6 class="card-windspeed" id="weather-windspeed-card16"></h6>
+                                    <p class="card-break">Humidity: </p>
+                                    <p class="card-humidity" id="weather-humidity-card16"> </p>
                                 </div>
                         </div>
                         <div class="col-md-3">
                             <article class="card card-style" style="width: 18rem;">
                                 <div class="card-body">
-                                    <p class="card-text" id="weather-date-card24"></p>
-                                    <h5 class="card-title" id="weather-temp-card24"></h5>
-                                    <h6 class="card-subtitle mb-2 text-muted" id="weather-windspeed-card24"></h6>
-                                    <p class="card-text" id="weather-humidity-card24"> </p>
+                                    <p class="card-date" id="weather-date-card24"></p>
+                                    <p class="card-break">Temperature:</p>
+                                    <h5 class="card-temp" id="weather-temp-card24"></h5>
+                                    <p class="card-break">Windspeed: </p>
+                                    <h6 class="card-windspeed" id="weather-windspeed-card24"></h6>
+                                    <p class="card-break">Humidity: </p>
+                                    <p class="card-humidity" id="weather-humidity-card24"> </p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-3">
                             <article class="card card-style" style="width: 18rem;">
                                 <div class="card-body">
-                                    <p class="card-text" id="weather-date-card32"></p>
-                                    <h5 class="card-title" id="weather-temp-card32"></h5>
-                                    <h6 class="card-subtitle mb-2 text-muted" id="weather-windspeed-card32"></h6>
-                                    <p class="card-text" id="weather-humidity-card32"></p>
+                                    <p class="card-date" id="weather-date-card32"></p>
+                                    <p class="card-break">Temperature:</p>
+                                    <h5 class="card-temp" id="weather-temp-card32"></h5>
+                                    <p class="card-break">Windspeed:</p>
+                                    <h6 class="card-windspeed" id="weather-windspeed-card32"></h6>
+                                    <p class="card-break">Humidity:</p>
+                                    <p class="card-humidity" id="weather-humidity-card32"></p>
                                 </div>
                             </article>
                         </div>

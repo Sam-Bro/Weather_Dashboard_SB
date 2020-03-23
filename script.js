@@ -22,22 +22,34 @@ function searchWeather(searchValue) {
                 var windspeed = data.list[i].wind.speed;
                 var humidity = data.list[i].main.humidity;
 
-                var weatherTemp = "#weather-name-card" + i;
-                var weatherName = "#weather-temp-card" + i;
+                var weatherTemp = "#weather-temp-card" + i;
+                var weatherName = "#weather-name-card" + i;
                 var weatherDate = "#weather-date-card" + i;
                 var weatherWindspeed = "#weather-windspeed-card" + i;
                 var weatherHumidity = "#weather-humidity-card" + i;
 
                 $(weatherName).append(name);
-                $(weatherTemp).append("temperature: " + temp + " °C");
+                $(weatherTemp).append(temp + " °C");
                 $(weatherDate).append(date);
-                $(weatherWindspeed).append("Windspeed: " + windspeed);
-                $(weatherHumidity).append("Humidity: " + humidity);
+                $(weatherWindspeed).append(windspeed + " MPH");
+                $(weatherHumidity).append(+ humidity + "%");
                 console.log("run");
 
             }
+            //get weather min and max temps
+            var tempMax = data.list[0].main.temp_max;
+            var tempMin = data.list[0].main.temp_min;
 
+            $("#weather-max").append(tempMax + " °C");
+            $("#weather-min").append(tempMin + " °C");
 
+            //create history links for search
+            if (history.indexOf(searchValue) === -1) {
+                history.pushState(searchValue);
+                window.localStorage.setItem("history", JSON.stringify(searchValue))
+
+                makeRow(searchValue);
+            }
 
         }
     })
@@ -46,13 +58,7 @@ function searchWeather(searchValue) {
 
 
 
-        //create history links for search
-        // if (history.indexOf(searchValue) === -1) {
-        //     history.pushState(searchValue);
-        //     window.localStorage.setItem("history", JSON.stringify(searchValue))
 
-        //     makeRow(searchValue);
-        // }
 
         //clear any old content
         //$("#today").empty();
