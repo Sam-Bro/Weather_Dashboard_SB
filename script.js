@@ -15,7 +15,7 @@ function searchWeather(searchValue) {
         url: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&units=metric&appid=5c646586befaee69363c2a97ded52005",
         dataType: "json",
         success: function (data) {
-
+            setLocal(searchValue)
             for (i = 0; i < 40; i += 8) {
                 var date = data.list[i].dt_txt;
                 var temp = data.list[i].main.temp;
@@ -42,13 +42,16 @@ function searchWeather(searchValue) {
 
             $("#weather-max").append(tempMax + " °C");
             $("#weather-min").append(tempMin + " °C");
-
-            //create history links for
-            localStorage.setItem(searchValue, searchValue);
-            saveSearch(searchValue)
         }
+        
     })
 }
+// save links to local
+function setLocal(searchValue) {
+    localStorage.setItem(searchValue, searchValue);
+    saveSearch(searchValue)
+}
+
 // clear button
 var clearBtn = document.getElementById("btn-clear");
 
@@ -100,12 +103,17 @@ function loadHistory() {
 loadHistory()
 
 //call from search history
-$(".history-style").on("click", historyLinks())
+$(".history-style").on("click", historyLinks)
+
 
 function historyLinks() {
     var historyClass = document.getElementsByClassName("history-style");
-    
+    var linkNumber = parseInt(this.title);
+    var historyVal = historyClass[linkNumber].text;
 
+
+    searchWeather(historyVal)
+    console.log("search value: " + historyVal);
 }
 
 
