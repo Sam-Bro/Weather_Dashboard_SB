@@ -9,6 +9,7 @@ searchBtn.addEventListener("click", function () {
 //search weather function
 function searchWeather(searchValue) {
     var searchValue = document.getElementById("city-search").value;
+    clearDay()
     $.ajax({
         type: "GET",
         url: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&units=metric&appid=5c646586befaee69363c2a97ded52005",
@@ -33,7 +34,6 @@ function searchWeather(searchValue) {
                 $(weatherDate).append(date);
                 $(weatherWindspeed).append(windspeed + " MPH");
                 $(weatherHumidity).append(+ humidity + "%");
-                console.log("run");
 
             }
             //get weather min and max temps
@@ -43,28 +43,71 @@ function searchWeather(searchValue) {
             $("#weather-max").append(tempMax + " °C");
             $("#weather-min").append(tempMin + " °C");
 
-            //create history links for search
-            if (history.indexOf(searchValue) === -1) {
-                history.pushState(searchValue);
-                window.localStorage.setItem("history", JSON.stringify(searchValue))
-
-                makeRow(searchValue);
-            }
-
+            //create history links for
+            localStorage.setItem(searchValue, searchValue);
+            saveSearch(searchValue)
         }
     })
+}
+// clear button
+var clearBtn = document.getElementById("btn-clear");
+
+clearBtn.addEventListener("click", function () {
+    clearDay()
+    localStorage.clear();
+})
+function clearDay() {
+    $(".today-return").empty();
+}
+//search history
+function saveSearch(searchValue) {
+    var a = document.createElement("a");
+    var newDiv = document.createElement("div");
+    var historyText = document.createTextNode(searchValue);
+    var searchHistory = document.getElementById("search-history");
+
+
+    a.appendChild(historyText);
+    a.classList.add("history-style");
+    newDiv.classList.add("div-padding")
+    a.title = "my title text";
+    a.href = "#";
+    newDiv.appendChild(a);
+    searchHistory.appendChild(newDiv);
+}
+// create history links from search
+function loadHistory() {
+    for (i = 0; i < localStorage.length; i++) {
+        var history = localStorage.key(i)
+
+        var a = document.createElement("a");
+        var newDiv = document.createElement("div");
+        var historyText = document.createTextNode(history);
+        var searchHistory = document.getElementById("search-history");
+
+
+        a.appendChild(historyText);
+        a.classList.add("history-style");
+        newDiv.classList.add("div-padding")
+        a.title = i;
+        a.href = "#";
+        newDiv.appendChild(a);
+        searchHistory.appendChild(newDiv);
+
+        console.log(history);
+    }
+}
+loadHistory()
+
+//call from search history
+$(".history-style").on("click", historyLinks())
+
+function historyLinks() {
+    var historyClass = document.getElementsByClassName("history-style");
+    
+
 }
 
 
 
 
-
-
-        //clear any old content
-        //$("#today").empty();
-
-        // //create hmtl content for current weather
-        // var title = $("<h3>")
-        // //.addClass("card-title")
-        // .text(data.name + " (" + new Date().toLocaleDateString)
-        // var card = $("<div>").addClass("card");

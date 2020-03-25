@@ -23,6 +23,14 @@
                     <input class="form-control mr-sm-2 w-75" type="search" placeholder="Search" aria-label="Search" id="city-search">
                     <button class="btn btn-search my-2 my-sm-0" type="submit" id="search-btn">Search</button>
                 </section>
+                <section id="search-history-sect">
+                    <article id="search-history">
+                        
+                    </article>
+                </section>
+                <section class="btn-clear-sect">
+                    <button class="btn btn-light" id="btn-clear">Clear</button>
+                </section>
             </aside>
             <section class="col-md-9 ">
                 <article class="main-col" id="main-col">
@@ -30,33 +38,33 @@
                         <article class="row row-today">
                             <div class="col-md-3 column-style">
                                 <div class="row row-style">
-                                    <h3 class="weather-text" id="weather-name-card0"></h3>
+                                    <h3 class="weather-text today-return" id="weather-name-card0"></h3>
                                 </div>
                                 <div class="row row-style ">
-                                    <p class="weather-text" id="weather-date-card0"></p>
+                                    <p class="weather-text today-return" id="weather-date-card0"></p>
                                 </div>
                             </div>
                             <div class="col-md-3 column-style">
-                                <p class="weather-text" id="weather-temp-card0"></p>
+                                <p class="weather-text today-return" id="weather-temp-card0"></p>
                             </div>
                             <div class="col-md-3 column-style">
                                 <div class="row row-style row-max">
                                     <p class="weather-text">Max of</p>
-                                    <p class="weather-text" id="weather-max"></p>
+                                    <p class="weather-text today-return" id="weather-max"></p>
                                 </div>
                                 <div class="row row-style row-min">
                                     <p class="weather-text">Min of</p>
-                                    <p class="weather-text" id="weather-min"></p>
+                                    <p class="weather-text today-return" id="weather-min"></p>
                                 </div>
                             </div>
                             <div class="col-md-3 column-style">
                                 <div class="row row-style">
                                     <p class="weather-text">Windspeed</p>
-                                    <p class="weather-text" id="weather-windspeed-card0"></p>
+                                    <p class="weather-text today-return" id="weather-windspeed-card0"></p>
                                 </div>
                                 <div class="row row-style">
                                     <p class="weather-text">Humidity</p>
-                                    <p class="weather-text" id="weather-humidity-card0"></p>
+                                    <p class="weather-text today-return" id="weather-humidity-card0"></p>
                                 </div>
                             </div>
                         </article>
@@ -72,51 +80,51 @@
                         <div class="col-md-3">
                             <article class="card card-style" style="width: 18rem;">
                                 <div class="card-body">
-                                    <p class="card-date" id="weather-date-card8"></p>
+                                    <p class="card-date today-return" id="weather-date-card8"></p>
                                     <p class="card-break">Temperature:</p>
-                                    <h5 class="card-temp" id="weather-temp-card8"></h5>
+                                    <h5 class="card-temp today-return" id="weather-temp-card8"></h5>
                                     <p class="card-break">Windspeed: </p>
-                                    <h6 class="card-windspeed" id="weather-windspeed-card8"></h6>
+                                    <h6 class="card-windspeed today-return" id="weather-windspeed-card8"></h6>
                                     <p class="card-break">Humidity: </p>
-                                    <p class="card-humidity" id="weather-humidity-card8"> </p>
+                                    <p class="card-humidity today-return" id="weather-humidity-card8"> </p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-3">
                             <article class="card card-style" style="width: 18rem;">
                                 <div class="card-body">
-                                    <p class="card-date" id="weather-date-card16"></p>
+                                    <p class="card-date today-return" id="weather-date-card16"></p>
                                     <p class="card-break">Temperature:</p>
-                                    <h5 class="card-temp" id="weather-temp-card16"></h5>
+                                    <h5 class="card-temp today-return" id="weather-temp-card16"></h5>
                                     <p class="card-break">Windspeed: </p>
-                                    <h6 class="card-windspeed" id="weather-windspeed-card16"></h6>
+                                    <h6 class="card-windspeed today-return" id="weather-windspeed-card16"></h6>
                                     <p class="card-break">Humidity: </p>
-                                    <p class="card-humidity" id="weather-humidity-card16"> </p>
+                                    <p class="card-humidity today-return" id="weather-humidity-card16"> </p>
                                 </div>
                         </div>
                         <div class="col-md-3">
                             <article class="card card-style" style="width: 18rem;">
                                 <div class="card-body">
-                                    <p class="card-date" id="weather-date-card24"></p>
+                                    <p class="card-date today-return" id="weather-date-card24"></p>
                                     <p class="card-break">Temperature:</p>
-                                    <h5 class="card-temp" id="weather-temp-card24"></h5>
+                                    <h5 class="card-temp today-return" id="weather-temp-card24"></h5>
                                     <p class="card-break">Windspeed: </p>
-                                    <h6 class="card-windspeed" id="weather-windspeed-card24"></h6>
+                                    <h6 class="card-windspeed today-return" id="weather-windspeed-card24"></h6>
                                     <p class="card-break">Humidity: </p>
-                                    <p class="card-humidity" id="weather-humidity-card24"> </p>
+                                    <p class="card-humidity today-return" id="weather-humidity-card24"> </p>
                                 </div>
                             </article>
                         </div>
                         <div class="col-md-3">
                             <article class="card card-style" style="width: 18rem;">
                                 <div class="card-body">
-                                    <p class="card-date" id="weather-date-card32"></p>
+                                    <p class="card-date today-return" id="weather-date-card32"></p>
                                     <p class="card-break">Temperature:</p>
-                                    <h5 class="card-temp" id="weather-temp-card32"></h5>
+                                    <h5 class="card-temp today-return" id="weather-temp-card32"></h5>
                                     <p class="card-break">Windspeed:</p>
-                                    <h6 class="card-windspeed" id="weather-windspeed-card32"></h6>
+                                    <h6 class="card-windspeed today-return" id="weather-windspeed-card32"></h6>
                                     <p class="card-break">Humidity:</p>
-                                    <p class="card-humidity" id="weather-humidity-card32"></p>
+                                    <p class="card-humidity today-return" id="weather-humidity-card32"></p>
                                 </div>
                             </article>
                         </div>
